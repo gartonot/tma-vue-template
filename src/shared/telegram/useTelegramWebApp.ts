@@ -86,7 +86,9 @@ export const useTelegramWebApp = () => {
         WebApp.ready();
 
         // Просим растянуть приложение
-        WebApp.expand();
+        setTimeout(() => {
+            WebApp.expand();
+        }, 100);
 
         // Пробуем открыть на весь экран, новое апи - может не везде работать
         try {
