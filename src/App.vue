@@ -20,8 +20,8 @@ const {
 	contentSafeArea
 } = useTelegramWebApp();
 
-alert(safeArea);
-alert(contentSafeArea);
+alert(JSON.stringify(safeArea));
+alert(JSON.stringify(contentSafeArea));
 </script>
 
 <style module>
