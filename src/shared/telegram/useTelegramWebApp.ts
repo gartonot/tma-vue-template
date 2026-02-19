@@ -89,9 +89,10 @@ export const useTelegramWebApp = () => {
         setTimeout(() => {
             WebApp.expand();
 
-            // Синхронизируем данные с телеграмма в наше приложение
-            setTimeout(syncFromWebApp, 50);
         }, 100);
+
+        // Синхронизируем данные с телеграмма в наше приложение
+        syncFromWebApp();
 
         // Пробуем открыть на весь экран, новое апи - может не везде работать
         try {
