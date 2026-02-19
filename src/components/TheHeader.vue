@@ -11,7 +11,12 @@
 
 <style module>
 .header {
-    padding-top: var(--tma-vue-content-safe-top);
+    --tg-top-offset: 58.8px; /* стандартная высота top bar */
+    padding-top: max(
+        var(--tma-vue-content-safe-top, 0px),
+        env(safe-area-inset-top),
+        var(--tg-top-offset)
+    );
     padding-left: var(--tma-vue-content-safe-left);
     padding-right: var(--tma-vue-content-safe-right);
     /* Custom */
