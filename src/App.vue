@@ -17,6 +17,10 @@ import { useTelegramWebApp } from '@/shared/telegram/useTelegramWebApp';
 const {
 	WebApp
 } = useTelegramWebApp();
+
+alert(WebApp.version);
+alert(WebApp.platform);
+alert(WebApp.isExpanded);
 </script>
 
 <style module>
