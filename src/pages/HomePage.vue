@@ -3,6 +3,7 @@
     	<div>
 			Home page
 		</div>
-		<textarea placeholder="Да да я да"></textarea>
+		<textarea placeholder="Enter text..."></textarea>
+		<button>Go?</button>
 	</main>
 </template>
