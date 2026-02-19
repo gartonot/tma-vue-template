@@ -11,7 +11,7 @@
 
 <style module>
 .header {
-    padding-top: var(--tg-top-offset);
+    padding-top: var(--tma-vue-content-safe-top);
     padding-left: var(--tma-vue-content-safe-left);
     padding-right: var(--tma-vue-content-safe-right);
     /* Custom */
