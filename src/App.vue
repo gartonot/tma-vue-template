@@ -21,7 +21,7 @@ const {
 
 <style module>
 .layout {
-	height: 100%;
+	height: var(--tma-vue-vh);
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 }

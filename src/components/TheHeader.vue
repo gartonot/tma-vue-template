@@ -1,6 +1,8 @@
 <template>
     <header :class="$style.header">
-        Header
+        <div :class="$style.headerInner">
+            Header
+        </div>
     </header>
 </template>
 
@@ -14,6 +16,8 @@
     padding-right: var(--tma-vue-content-safe-right);
     /* Custom */
     border-bottom: 1px solid black;
-    height: 50px;
+}
+.headerInner {
+    min-height: 50px;
 }
 </style>

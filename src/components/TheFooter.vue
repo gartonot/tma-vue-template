@@ -1,6 +1,8 @@
 <template>
     <footer :class="$style.footer">
-        Footer
+        <div :class="$style.footerInner">
+            Footer
+        </div>
     </footer>
 </template>
 
@@ -14,6 +16,8 @@
     padding-right: var(--tma-vue-content-safe-right);
     /* Custom */
     border-top: 1px solid black;
-    height: 50px;
+}
+.footerInner {
+    min-height: 50px;
 }
 </style>
