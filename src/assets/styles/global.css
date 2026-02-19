@@ -1,0 +1,5 @@
+#app {
+    height: var(--tma-vue-vh-stable);
+    width: 100%;
+    overflow: hidden;
+}

@@ -1,0 +1,14 @@
+:root {
+    --tma-vue-safe-top: 0px;
+    --tma-vue-safe-right: 0px;
+    --tma-vue-safe-bottom: 0px;
+    --tma-vue-safe-left: 0px;
+
+    --tma-vue-content-safe-top: 0px;
+    --tma-vue-content-safe-right: 0px;
+    --tma-vue-content-safe-bottom: 0px;
+    --tma-vue-content-safe-left: 0px;
+
+    --tma-vue-vh: 100vh;
+    --tma-vue-vh-stable: 100vh;
+}
