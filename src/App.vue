@@ -15,7 +15,6 @@ import TheFooter from '@/components/TheFooter.vue';
 import { useTelegramWebApp } from '@/shared/telegram/useTelegramWebApp';
 
 const {
-	WebApp,
 	safeArea,
 	contentSafeArea
 } = useTelegramWebApp();
