@@ -73,7 +73,7 @@ export const useTelegramWebApp = () => {
             '--tma-vue-content-safe-left': contentSafeArea.left,
 
             '--tma-vue-vh': viewportHeight.value, // Текущая высота
-            '--tma-vue-stable-vh': viewportStableHeight.value, // Стабильная высота
+            '--tma-vue-vh-stable': viewportStableHeight.value, // Стабильная высота
         });
     }
 
@@ -87,9 +87,6 @@ export const useTelegramWebApp = () => {
 
         // Просим растянуть приложение на весь экран (может не до конца растянуть и не везде работает одинаково)
         WebApp.expand();
-
-        // Просим фулскрин, если доступен
-        WebApp.requestFullscreen();
 
         // Синхронизируем данные с телеграмма в наше приложение
         syncFromWebApp();
