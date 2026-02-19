@@ -15,8 +15,13 @@ import TheFooter from '@/components/TheFooter.vue';
 import { useTelegramWebApp } from '@/shared/telegram/useTelegramWebApp';
 
 const {
-	WebApp
+	WebApp,
+	safeArea,
+	contentSafeArea
 } = useTelegramWebApp();
+
+alert(safeArea);
+alert(contentSafeArea);
 </script>
 
 <style module>
