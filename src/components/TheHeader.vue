@@ -11,7 +11,7 @@
 
 <style module>
 .header {
-    padding-top: var(--tma-vue-content-safe-top);
+    padding-top: calc(var(--tma-vue-content-safe-top) + 56px);
     padding-left: var(--tma-vue-content-safe-left);
     padding-right: var(--tma-vue-content-safe-right);
     /* Custom */
