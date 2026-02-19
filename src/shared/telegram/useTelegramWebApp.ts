@@ -85,8 +85,15 @@ export const useTelegramWebApp = () => {
         // Говорим телеграму, что мы готовы начать работу с ним
         WebApp.ready();
 
-        // Просим растянуть приложение на весь экран (может не до конца растянуть и не везде работает одинаково)
+        // Просим растянуть приложение
         WebApp.expand();
+
+        // Пробуем открыть на весь экран, новое апи - может не везде работать
+        try {
+            WebApp.requestFullscreen?.();
+        } catch {
+            console.error('[TMA-vue] Method requestFullscreen failed')
+        }
 
         // Синхронизируем данные с телеграмма в наше приложение
         syncFromWebApp();
