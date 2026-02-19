@@ -88,6 +88,9 @@ export const useTelegramWebApp = () => {
         // Просим растянуть приложение
         setTimeout(() => {
             WebApp.expand();
+
+            // Синхронизируем данные с телеграмма в наше приложение
+            setTimeout(syncFromWebApp, 50);
         }, 100);
 
         // Пробуем открыть на весь экран, новое апи - может не везде работать
@@ -96,9 +99,6 @@ export const useTelegramWebApp = () => {
         } catch {
             console.error('[TMA-vue] Method requestFullscreen failed')
         }
-
-        // Синхронизируем данные с телеграмма в наше приложение
-        syncFromWebApp();
 
         WebApp.onEvent('viewportChanged', onViewportChanged);
         WebApp.onEvent('safeAreaChanged', onViewportChanged);
