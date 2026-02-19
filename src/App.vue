@@ -14,13 +14,7 @@ import TheHeader from '@/components/TheHeader.vue';
 import TheFooter from '@/components/TheFooter.vue';
 import { useTelegramWebApp } from '@/shared/telegram/useTelegramWebApp';
 
-const {
-	safeArea,
-	contentSafeArea
-} = useTelegramWebApp();
-
-alert(JSON.stringify(safeArea));
-alert(JSON.stringify(contentSafeArea));
+useTelegramWebApp();
 </script>
 
 <style module>
