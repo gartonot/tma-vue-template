@@ -22,8 +22,7 @@ const { WebApp } = useTelegramWebApp();
 .layout {
 	display: flex;
 	flex-direction: column;
-	height: var(--tg-viewport-stable-height, 100vh);
-	min-height: 0;
+	height: 100%;
 }
 .header {
 	padding-top: var(--tg-content-safe-area-inset-top);

@@ -1,5 +1,5 @@
 #app {
-    height: var(--tg-viewport-stable-height);
+    height: 100%;
     width: 100%;
     overflow: hidden;
 }
