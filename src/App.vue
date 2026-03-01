@@ -34,7 +34,7 @@ useTelegramWebApp();
 	overflow: auto;
 	flex-grow: 1;
 	min-height: 0;
-	/* -webkit-overflow-scrolling: touch; */
+	-webkit-overflow-scrolling: touch;
 }
 .footer {
 	padding-bottom: calc(var(--tma-vue-content-safe-bottom));
