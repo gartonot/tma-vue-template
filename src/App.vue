@@ -2,6 +2,7 @@
     <div :class="$style.layout">
 		<TheHeader :class="$style.header" />
 		<main :class="$style.content">
+			<pre>{{ contentSafeArea }}</pre>
 			<RouterView/>
 		</main>
 		<TheFooter :class="$style.footer" />
@@ -14,7 +15,7 @@ import TheHeader from '@/components/TheHeader.vue';
 import TheFooter from '@/components/TheFooter.vue';
 import { useTelegramWebApp } from '@/shared/telegram/useTelegramWebApp';
 
-useTelegramWebApp();
+const { contentSafeArea } = useTelegramWebApp();
 </script>
 
 <style module>
