@@ -1,5 +1,5 @@
 <template>
-    <div :class="$style.layout">
+    <div :class="$style.layout" :style="{ '--padding-top': `${paddingTop}px` }">
 		<TheHeader :class="$style.header" />
 		<main :class="$style.content">
 			<pre>{{ WebApp.contentSafeAreaInset }}</pre>
@@ -14,8 +14,11 @@ import { RouterView } from 'vue-router'
 import TheHeader from '@/components/TheHeader.vue';
 import TheFooter from '@/components/TheFooter.vue';
 import { useTelegramWebApp } from '@/shared/telegram/useTelegramWebApp';
+import { computed } from 'vue';
 
 const { WebApp } = useTelegramWebApp();
+
+const paddingTop = computed(() => WebApp.contentSafeAreaInset?.top ?? 56);
 </script>
 
 <style module>
@@ -25,7 +28,7 @@ const { WebApp } = useTelegramWebApp();
 	height: 100%;
 }
 .header {
-	padding-top: var(--tg-content-safe-area-inset-top);
+	padding-top: calc(var(--padding-top));
     padding-left: var(--tg-content-safe-area-inset-left);
     padding-right: var(--tg-content-safe-area-inset-right);
 }
