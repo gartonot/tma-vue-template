@@ -69,6 +69,17 @@ export const useTelegramWebApp = () => {
         // Синхронизируем данные с телеграмма в наше приложение
         syncFromWebApp();
 
+        // Пробуем открыть на весь экран, новое апи - может не везде работать
+        try {
+            WebApp.requestFullscreen?.();
+
+            setTimeout(() => {
+                  syncFromWebApp();
+            }, 300);
+        } catch {
+            console.error('[TMA-vue] Method requestFullscreen failed')
+        }
+
         WebApp.onEvent('viewportChanged', onViewportChanged);
         WebApp.onEvent('safeAreaChanged', onViewportChanged);
         WebApp.onEvent('contentSafeAreaChanged', onViewportChanged);
