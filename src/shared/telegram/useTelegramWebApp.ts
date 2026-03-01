@@ -80,6 +80,9 @@ export const useTelegramWebApp = () => {
             console.error('[TMA-vue] Method requestFullscreen failed')
         }
 
+        // Запрещаем вертикальный свайп
+        WebApp.disableVerticalSwipes();
+
         WebApp.onEvent('viewportChanged', onViewportChanged);
         WebApp.onEvent('safeAreaChanged', onViewportChanged);
         WebApp.onEvent('contentSafeAreaChanged', onViewportChanged);
