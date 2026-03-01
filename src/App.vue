@@ -26,7 +26,8 @@ const { contentSafeArea } = useTelegramWebApp();
 	min-height: 0;
 }
 .header {
-	padding-top: var(--tma-vue-content-safe-top);
+	/* padding-top: var(--tma-vue-content-safe-top); */
+	padding-top: var(--tg-content-safe-area-inset-top);
     padding-left: var(--tma-vue-content-safe-left);
     padding-right: var(--tma-vue-content-safe-right);
 }
@@ -37,7 +38,8 @@ const { contentSafeArea } = useTelegramWebApp();
 	-webkit-overflow-scrolling: touch; /* Планый скролл для IOS */
 }
 .footer {
-	padding-bottom: var(--tma-vue-content-safe-bottom);
+	/* padding-bottom: var(--tma-vue-content-safe-bottom); */
+	padding-bottom: var(--tg-content-safe-area-inset-bottom);
     padding-left: var(--tma-vue-content-safe-left);
     padding-right: var(--tma-vue-content-safe-right);
 }
