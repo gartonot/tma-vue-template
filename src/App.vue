@@ -20,14 +20,13 @@ const { contentSafeArea } = useTelegramWebApp();
 
 <style module>
 .layout {
-	position: fixed;
-	inset: 0;
 	display: flex;
 	flex-direction: column;
+	height: var(--tma-vue-vh-stable);
 	min-height: 0;
 }
 .header {
-	padding-top: calc(var(--tma-vue-content-safe-top));
+	padding-top: var(--tma-vue-content-safe-top);
     padding-left: var(--tma-vue-content-safe-left);
     padding-right: var(--tma-vue-content-safe-right);
 }
@@ -35,10 +34,10 @@ const { contentSafeArea } = useTelegramWebApp();
 	overflow: auto;
 	flex-grow: 1;
 	min-height: 0;
-	-webkit-overflow-scrolling: touch;
+	-webkit-overflow-scrolling: touch; /* Планый скролл для IOS */
 }
 .footer {
-	padding-bottom: calc(var(--tma-vue-content-safe-bottom));
+	padding-bottom: var(--tma-vue-content-safe-bottom);
     padding-left: var(--tma-vue-content-safe-left);
     padding-right: var(--tma-vue-content-safe-right);
 }

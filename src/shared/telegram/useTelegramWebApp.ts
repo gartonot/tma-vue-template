@@ -32,9 +32,11 @@ export const useTelegramWebApp = () => {
     const viewportStableHeight = ref(window.innerHeight);
 
     const syncFromWebApp = () => {
+        // Telegram считает, что header приложения ответственность приложения
+        const TELEGRAM_HEADER_OFFSET = 56;
         // Заполняем контентный safeArea
         const webAppAreaInset = {
-            top: WebApp.contentSafeAreaInset.top,
+            top: WebApp.contentSafeAreaInset.top + TELEGRAM_HEADER_OFFSET,
             right: WebApp.contentSafeAreaInset.right,
             bottom: WebApp.contentSafeAreaInset.bottom,
             left: WebApp.contentSafeAreaInset.left,
