@@ -2,7 +2,7 @@
     <div :class="$style.layout">
 		<TheHeader :class="$style.header" />
 		<main :class="$style.content">
-			<pre>{{ contentSafeArea }}</pre>
+			<pre>{{ WebApp.contentSafeAreaInset }}</pre>
 			<RouterView/>
 		</main>
 		<TheFooter :class="$style.footer" />
@@ -15,21 +15,20 @@ import TheHeader from '@/components/TheHeader.vue';
 import TheFooter from '@/components/TheFooter.vue';
 import { useTelegramWebApp } from '@/shared/telegram/useTelegramWebApp';
 
-const { contentSafeArea } = useTelegramWebApp();
+const { WebApp } = useTelegramWebApp();
 </script>
 
 <style module>
 .layout {
 	display: flex;
 	flex-direction: column;
-	height: var(--tma-vue-vh-stable);
+	height: var(--tg-viewport-stable-height);
 	min-height: 0;
 }
 .header {
-	/* padding-top: var(--tma-vue-content-safe-top); */
 	padding-top: var(--tg-content-safe-area-inset-top);
-    padding-left: var(--tma-vue-content-safe-left);
-    padding-right: var(--tma-vue-content-safe-right);
+    padding-left: var(--tg-content-safe-area-inset-left);
+    padding-right: var(--tg-content-safe-area-inset-right);
 }
 .content {
 	overflow: auto;
@@ -38,9 +37,8 @@ const { contentSafeArea } = useTelegramWebApp();
 	-webkit-overflow-scrolling: touch; /* Планый скролл для IOS */
 }
 .footer {
-	/* padding-bottom: var(--tma-vue-content-safe-bottom); */
 	padding-bottom: var(--tg-content-safe-area-inset-bottom);
-    padding-left: var(--tma-vue-content-safe-left);
-    padding-right: var(--tma-vue-content-safe-right);
+    padding-left: var(--tg-content-safe-area-inset-left);
+    padding-right: var(--tg-content-safe-area-inset-right);
 }
 </style>
