@@ -1,10 +1,10 @@
 <template>
     <div :class="$style.layout">
-		<TheHeader />
+		<TheHeader :class="$style.header" />
 		<main :class="$style.content">
 			<RouterView/>
 		</main>
-		<TheFooter />
+		<TheFooter :class="$style.footer" />
     </div>
 </template>
 
@@ -19,11 +19,26 @@ useTelegramWebApp();
 
 <style module>
 .layout {
-	height: var(--tma-vue-vh);
-	display: grid;
-	grid-template-rows: auto 1fr auto;
+	position: fixed;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+}
+.header {
+	padding-top: calc(var(--tma-vue-content-safe-top));
+    padding-left: var(--tma-vue-content-safe-left);
+    padding-right: var(--tma-vue-content-safe-right);
 }
 .content {
 	overflow: auto;
+	flex-grow: 1;
+	min-height: 0;
+	/* -webkit-overflow-scrolling: touch; */
+}
+.footer {
+	padding-bottom: calc(var(--tma-vue-content-safe-bottom));
+    padding-left: var(--tma-vue-content-safe-left);
+    padding-right: var(--tma-vue-content-safe-right);
 }
 </style>
