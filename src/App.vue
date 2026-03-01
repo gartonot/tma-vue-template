@@ -1,5 +1,5 @@
 <template>
-    <div :class="$style.layout">
+    <div :class="$style.layout" :style="{ '--telegram-top-offset': `${telegramTopOffset}px` }">
 		<TheHeader :class="$style.header" />
 		<main :class="$style.content">
 			<pre>{{ WebApp.contentSafeAreaInset }}</pre>
@@ -15,15 +15,16 @@ import TheHeader from '@/components/TheHeader.vue';
 import TheFooter from '@/components/TheFooter.vue';
 import { useTelegramWebApp } from '@/shared/telegram/useTelegramWebApp';
 
-const { WebApp } = useTelegramWebApp();
+const { WebApp, telegramTopOffset } = useTelegramWebApp();
 </script>
 
 <style module>
 .layout {
 	display: flex;
 	flex-direction: column;
-	height: var(--tg-viewport-stable-height);
+	height: var(--tg-viewport-stable-height, 100vh);
 	min-height: 0;
+	padding-top: var(--telegram-top-offset);
 }
 .header {
 	padding-top: var(--tg-content-safe-area-inset-top);
