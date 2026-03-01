@@ -18,7 +18,11 @@ import { computed } from 'vue';
 
 const { WebApp } = useTelegramWebApp();
 
-const paddingTop = computed(() => WebApp.contentSafeAreaInset?.top ?? 56);
+const paddingTop = computed(() => {
+	const top = WebApp.contentSafeAreaInset?.top ?? 0;
+
+  	return top > 0 ? top : 56;
+});
 </script>
 
 <style module>
@@ -28,7 +32,7 @@ const paddingTop = computed(() => WebApp.contentSafeAreaInset?.top ?? 56);
 	height: 100%;
 }
 .header {
-	padding-top: calc(var(--padding-top));
+	padding-top: var(--padding-top);
     padding-left: var(--tg-content-safe-area-inset-left);
     padding-right: var(--tg-content-safe-area-inset-right);
 }
